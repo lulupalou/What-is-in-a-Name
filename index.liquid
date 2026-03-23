@@ -1,7 +1,24 @@
 ---
-layout: layout.liquid
-title: Flower Name Inc.
+title: Name Generator
+layout: layouts/base.liquid 
 ---
 
-<h1>Name <strong>Generatorplate</strong></h1>
-<img alt="pine" src="leaf" width="50" />
+<div x-data="{name: ['Lily', 'Rose', 'Daisy', 'Jasmine', 'Cosmos', 'Aster','Lilac','Sunflower', 'Peony', 'Tulip']}">
+    <button @click="alert(name[Math.floor(Math.random() * name.length)])">Generate</button>
+</div>
+
+<h5> Select the button above to generate one of the flower names below</h5>
+
+<ul class="list-group">
+    <li class="list-group-item active" aria-current="true">Possible Options</li>
+    <li class="list-group-item">Lily</li>
+    <li class="list-group-item">Rose</li>
+    <li class="list-group-item">Daisy</li>
+    <li class="list-group-item">Jasmine</li>
+    <li class="list-group-item">Cosmos</li>
+    <li class="list-group-item">Aster</li>
+    <li class="list-group-item">Lilac</li>
+    <li class="list-group-item">Sunflower</li>
+    <li class="list-group-item">Peony</li>
+    <li class="list-group-item">Tulip</li>
+</ul>
